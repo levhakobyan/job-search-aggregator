@@ -85,8 +85,6 @@ export default function Home() {
                 <SearchForm onSearch={handleSearch} />
                 {error && <Alert message={error.message} type="error" showIcon />}
 
-                {loadedJobs.length} - {JSON.stringify(hasMore)}
-
                 {loading && pagination.page === 1 ? <Spin size="large" style={{ display: 'block', margin: '20px auto' }} />
                     : <JobList
                         jobs={loadedJobs}
